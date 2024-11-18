@@ -1,0 +1,256 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\chessitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\chessitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\chesstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\chesstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\advisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\advisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\horse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\horse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\elephant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\elephant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\emptylocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\emptylocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\cannon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\cannon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\soldier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\soldier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\pawns\\rook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\pawns\\rook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\xiangqi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\xiangqi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|c:\\users\\admin\\downloads\\latest\\xiangqi\\xiangqi\\matchgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\matchgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\xiangqi\\matchgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0D9BC09C-BAC2-4862-BF87-605B12B33EA3}|Xiangqi\\Xiangqi.csproj|solutionrelative:xiangqi\\matchgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "General.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\General.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\General.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\General.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\General.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:35:41.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Elephant.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Elephant.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\Elephant.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Elephant.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\Elephant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:34:33.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\GameManager.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\GameManager.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\GameManager.cs",
+              "RelativeToolTip": "Xiangqi\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T10:47:20.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChessItem.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\ChessItem.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\ChessItem.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\ChessItem.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\ChessItem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:19:59.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmptyLocation.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\EmptyLocation.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\EmptyLocation.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\EmptyLocation.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\EmptyLocation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:34:14.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Horse.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Horse.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\Horse.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Horse.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\Horse.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:35:50.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cannon.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Cannon.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\Cannon.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Cannon.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\Cannon.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:34:36.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Rook.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Rook.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\Rook.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Rook.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\Rook.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:36:11.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChessTable.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\ChessTable.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\ChessTable.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\ChessTable.cs",
+              "RelativeToolTip": "Xiangqi\\ChessTable.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwEMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T16:02:21.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Advisor.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Advisor.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\Advisor.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Advisor.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\Advisor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T05:24:58.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Soldier.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Soldier.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\Pawns\\Soldier.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Pawns\\Soldier.cs",
+              "RelativeToolTip": "Xiangqi\\Pawns\\Soldier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:36:15.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Xiangqi",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Xiangqi.csproj",
+              "RelativeDocumentMoniker": "Xiangqi\\Xiangqi.csproj",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\Xiangqi.csproj",
+              "RelativeToolTip": "Xiangqi\\Xiangqi.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-13T12:24:40.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MatchGame.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\MatchGame.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\MatchGame.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\MatchGame.cs",
+              "RelativeToolTip": "Xiangqi\\MatchGame.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:52:13.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MatchGame.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Downloads\\latest\\Xiangqi\\Xiangqi\\MatchGame.cs",
+              "RelativeDocumentMoniker": "Xiangqi\\MatchGame.cs",
+              "ToolTip": "C:\\Users\\admin\\Downloads\\Xiangqi_RENEWED (4)\\Xiangqi\\Xiangqi\\MatchGame.cs [Design]",
+              "RelativeToolTip": "..\\..\\Xiangqi_RENEWED (4)\\Xiangqi\\Xiangqi\\MatchGame.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:51:29.664Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
