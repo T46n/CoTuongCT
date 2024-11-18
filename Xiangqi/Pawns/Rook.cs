@@ -8,107 +8,24 @@ namespace Xiangqi
 {
     public class Rook:ChessItem
     {
-        public Rook(int locX, int locY, int type, int side)
+        public Rook(int locX, int locY, int type, int side) : base(locX, locY, type, side)
         {
-            this.type = type;
-            this.side = side;
-            this.img_locX = locX;
-            this.img_locY = locY;
             if (side == 0) bitmap = new Bitmap(Xiangqi.Properties.Resources.black_rook);
             else bitmap = new Bitmap(Xiangqi.Properties.Resources.red_rook);
         }
-        public override int CheckRule(int x, int y)
+
+        public Rook(Rook x) : base(x.img_locX, x.img_locY, x.type, x.side)
         {
-            if((x== img_locX && y!= img_locY) || (x!=img_locX && y ==img_locY))
-            {
-                if(x== img_locX)
-                {
-                    if(y>img_locY)
-                    {
-                        for(int i= img_locY;i<y;i++)
-                        {
-                            if (GameManager.GameBoard[x,i].side ==1)
-                            {
-                                return 0;
-                            }    
-                        }
-                        if (CheckAvailable(x, y) == 0 )
-                        {
-                            
-                            return 1;
-                        }  
-                        else
-                        {
-                            return 0;
-                        }                               
-                    }
-                    if (y < img_locY)
-                    {
-                        for (int i = img_locY; i > y; i--)
-                        {
-                            if (GameManager.GameBoard[x, i].side == 1)
-                            {
-                                return 0;
-                            }
-                        }
-                        if (CheckAvailable(x, y) == 0 || CheckAvailable(x, y) == 2)
-                        {
-                            
-                            return 1;
-                        }
-                        else
-                        {
-                            return 0;
-                        }
-                    }
-                }
-                if (y == img_locY)
-                {
-                    if (x > img_locX)
-                    {
-                        for (int i = img_locX; i < x; i++)
-                        {
-                            if (GameManager.GameBoard[i, y].side == 1)
-                            {
-                                return 0;
-                            }
-                        }
-                        if (CheckAvailable(x, y) == 0 || CheckAvailable(x, y) == 2)
-                        {
-                            
-                            return 1;
-                        }
-                        else
-                        {
-                            return 0;
-                        }
-                    }
-                    if (x < img_locX)
-                    {
-                        for (int i = img_locX; i > x; i--)
-                        {
-                            if (GameManager.GameBoard[i, y].side == 1)
-                            {
-                                return 0;
-                            }
-                        }
-                        if (CheckAvailable(x, y) == 0 || CheckAvailable(x, y) == 2)
-                        {
-                            
-                            return 1;
-                        }
-                        else
-                        {
-                            return 0;
-                        }
-                    }
-                }
-            }
-            return 0;
+            this.bitmap = x.bitmap;
         }
-        public int CheckAvailable(int x,int y)
+
+        public override ChessItem Copy()
         {
-            return 1;
+            //return new Rook(this.img_locX, this.img_locY, this.type, this.side);
+
+            ChessItem copy = new Rook(this.img_locX, this.img_locY, this.type, this.side);
+            copy.bitmap = this.bitmap;
+            return copy;
         }
     }
 }

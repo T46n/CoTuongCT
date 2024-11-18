@@ -8,13 +8,15 @@ namespace Xiangqi
 {
     public class EmptyLocation:ChessItem
     {
-        public EmptyLocation(int img_locX, int img_locY, int type, int side)
+        public EmptyLocation(int locX, int locY, int type, int side) : base(locX, locY, type, side)
         {
-            this.type = type;
-            this.side = side;
-            this.img_locX = img_locX;
-            this.img_locY = img_locY;
             bitmap = new Bitmap(Xiangqi.Properties.Resources.empty_Item);
         }
+
+        //public override ChessItem Copy()
+        //{
+        //    return new EmptyLocation(this.img_locX, this.img_locY, this.type, this.side);
+        //}
+
     }
 }

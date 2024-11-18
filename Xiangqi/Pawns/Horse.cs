@@ -8,211 +8,25 @@ namespace Xiangqi
 {
     public class Horse : ChessItem
     {
-        public Horse(int locX, int locY, int type, int side)
+        public Horse(int locX, int locY, int type, int side) : base(locX, locY, type, side)
         {
-            this.type = type;
-            this.side = side;
-            this.img_locX = locX;
-            this.img_locY = locY;
             if (side == 0) bitmap = new Bitmap(Xiangqi.Properties.Resources.black_knight);
             else bitmap = new Bitmap(Xiangqi.Properties.Resources.red_knight);
         }
-        public override int CheckRule(int x, int y)
+
+        public Horse(Horse x) : base(x.img_locX, x.img_locY, x.type, x.side)
         {
-            int p;
-            if (x - this.img_locX == 2 &&  y - this.img_locY == 1)
-            {
-                p = CheckAvailable(this.img_locX + 2, this.img_locY + 1);
-                if (GameManager.GameBoard[img_locX + 1,img_locY ].side == -1
-                   || GameManager.GameBoard[img_locX + 2, img_locY].side == -1)
-                {
-                    if (p == 0|| p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }    
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == 2 && y - this.img_locY == -1)
-            {
-                p = CheckAvailable(this.img_locX + 2, this.img_locY - 1);
-                if (GameManager.GameBoard[img_locX + 1, img_locY].side == -1
-                   || GameManager.GameBoard[img_locX + 2, img_locY].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == -2 && y - this.img_locY == 1)
-            {
-                p = CheckAvailable(this.img_locX - 2, this.img_locY + 1);
-                if (GameManager.GameBoard[img_locX - 1, img_locY].side == -1
-                   || GameManager.GameBoard[img_locX - 2, img_locY].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == 2 && y - this.img_locY == -1)
-            {
-                p = CheckAvailable(this.img_locX + 2, this.img_locY + 1);
-                if (GameManager.GameBoard[img_locX + 1, img_locY].side == -1
-                   || GameManager.GameBoard[img_locX + 2, img_locY].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == -2 && y - this.img_locY == -1)
-            {
-                p = CheckAvailable(this.img_locX - 2, this.img_locY - 1);
-                if (GameManager.GameBoard[img_locX - 1, img_locY].side == -1
-                   || GameManager.GameBoard[img_locX - 2, img_locY].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == 1 && y - this.img_locY == 2)
-            {
-                p = CheckAvailable(this.img_locX + 1, this.img_locY + 2);
-                if (GameManager.GameBoard[img_locX , img_locY+1].side == -1
-                   || GameManager.GameBoard[img_locX , img_locY+2].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == 1 && y - this.img_locY == -2)
-            {
-                p = CheckAvailable(this.img_locX +1, this.img_locY - 2);
-                if (GameManager.GameBoard[img_locX , img_locY-1].side == -1
-                   || GameManager.GameBoard[img_locX , img_locY-2].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == -1 && y - this.img_locY == 2)
-            {
-                p = CheckAvailable(this.img_locX - 1, this.img_locY + 2);
-                if (GameManager.GameBoard[img_locX, img_locY + 1].side == -1
-                   || GameManager.GameBoard[img_locX, img_locY + 2].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            if (x - this.img_locX == -1 && y - this.img_locY == -2)
-            {
-                p = CheckAvailable(this.img_locX - 1, this.img_locY - 2);
-                if (GameManager.GameBoard[img_locX, img_locY - 1].side == -1
-                   || GameManager.GameBoard[img_locX, img_locY - 2].side == -1)
-                {
-                    if (p == 0 || p == 2)
-                    {
-                        
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            return 0;
+            this.bitmap = x.bitmap;
         }
 
-        
+        public override ChessItem Copy()
+        {
+            //return new Horse(this.img_locX, this.img_locY, this.type, this.side);
+
+            ChessItem copy = new Horse(this.img_locX, this.img_locY, this.type, this.side);
+            copy.bitmap = this.bitmap;
+            return copy;
+        }
 
     }
 }

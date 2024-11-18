@@ -1,81 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Xiangqi
 {
-    public class Advisor:ChessItem
+    public class Advisor: ChessItem
     {
-        public Advisor(int locX, int locY, int type, int side)
+
+
+
+        public Advisor(int locX, int locY, int type, int side) : base(locX, locY, type, side)
         {
-            this.type = type;
-            this.side = side;
-            this.img_locX = locX;
-            this.img_locY = locY;
             if (side == 0) bitmap = new Bitmap(Xiangqi.Properties.Resources.black_advisor);
             else bitmap = new Bitmap(Xiangqi.Properties.Resources.red_advisor);
         }
-        public override int CheckRule(int x, int y)
+        public Advisor(Advisor x):base(x.img_locX, x.img_locY, x.type, x.side)
         {
-            if (x < 5)
-            {
-                if (x < 3 || x > 5)
-                {
-                    return 0;
-                }
-                if (y > 1)
-                {
-                    return 0;
-                }
-            }
-            else if (x > 5)
-            {
-                if (x < 3 || x > 5)
-                {
-                    return 0;
-                }
-                if (y < 8)
-                {
-                    return 0;
-                }
+            this.bitmap = x.bitmap;
+        }
 
-            }
-            if (x - img_locX == 1 && y - img_locY == 1)
-            {
-                int p = CheckAvailable(this.img_locX +1, this.img_locY + 1);
-                if(p ==0 || p ==2)
-                {
-                    return 0;
-                }
-
-            }
-            if (x - img_locX == 1 && y - img_locY == -1)
-            {
-                int p = CheckAvailable(this.img_locX + 1, this.img_locY - 1);
-                if (p == 0 || p == 2)
-                {
-                    return 0;
-                }
-            }
-            if (x - img_locX == -1 && y - img_locY == 1)
-            {
-                int p = CheckAvailable(this.img_locX - 1, this.img_locY + 1);
-                if (p == 0 || p == 2)
-                {
-                    return 0;
-                }
-            }
-            if (x - img_locX == -1 && y - img_locY == -1)
-            {
-                int p = CheckAvailable(this.img_locX - 1, this.img_locY - 1);
-                if (p == 0 || p == 2)
-                {
-                    return 0;
-                }
-            }
-            return 0;
+        public override ChessItem Copy()
+        {
+            ChessItem copy= new Advisor(this.img_locX, this.img_locY, this.type, this.side);
+            copy.bitmap = this.bitmap;
+            return copy;
         }
     }
 }

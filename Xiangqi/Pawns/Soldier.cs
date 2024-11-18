@@ -8,119 +8,25 @@ namespace Xiangqi
 {
     public class Soldier : ChessItem
     {
-        public Soldier(int locX, int locY, int type, int side)
+        public Soldier(int locX, int locY, int type, int side) : base(locX, locY, type, side)
         {
-            this.type = type;
-            this.side = side;
-            this.img_locX = locX;
-            this.img_locY = locY;
             if (side == 0) bitmap = new Bitmap(Xiangqi.Properties.Resources.black_pawn);
             else bitmap = new Bitmap(Xiangqi.Properties.Resources.red_pawn);
         }
-        public override int CheckRule(int x, int y)
+
+        public Soldier(Soldier x) : base(x.img_locX, x.img_locY, x.type, x.side)
         {
-            if (type == 0)
-            {
-                if (y <= 4)
-                {
-                    if (x == img_locX && y - img_locY == 1)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX, this.img_locY + 1);
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-                    }
-                }
-                else if(x> 4)
-                {
-                    if (x == img_locX && y - img_locY == 1)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX, this.img_locY + 1);
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-                    }
-                    if (x - img_locX == 1 && y - img_locY == 0)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX+1, this.img_locY );
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-
-                    }
-                    if (x - img_locX == -1 && y - img_locY == 0)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX - 1, this.img_locY);
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-                    }
-                }    
-               
-            }
-            else if (type == 0)
-            {
-                if (y >= 5)
-                {
-                    if (x == img_locX && y - img_locY == -1)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX, this.img_locY - 1);
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-                    }
-                }
-                else if (x < 5)
-                {
-                    if (x == img_locX && y - img_locY == -1)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX, this.img_locY - 1);
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-                    }
-                    if (x - img_locX == 1 && y - img_locY == 0)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX + 1, this.img_locY);
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-                    }
-                    if (x - img_locX == -1 && y - img_locY == 0)
-                    {
-                        {
-                            int p = CheckAvailable(this.img_locX - 1, this.img_locY);
-                            if (p == 0 || p == 2)
-                            {
-                                return 0;
-                            }
-                        }
-                    }
-                }
-
-            }
-            return 0;
+            this.bitmap = x.bitmap;
         }
+
+        public override ChessItem Copy()
+        {
+            //return new Soldier(this.img_locX, this.img_locY, this.type, this.side);
+
+            ChessItem copy = new Soldier(this.img_locX, this.img_locY, this.type, this.side);
+            copy.bitmap = this.bitmap;
+            return copy;
+        }
+
     }
 }
