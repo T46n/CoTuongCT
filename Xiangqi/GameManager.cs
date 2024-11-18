@@ -16,33 +16,36 @@ namespace Xiangqi
         public readonly Bitmap empty_Item = new Bitmap(Xiangqi.Properties.Resources.empty_Item);
 
         public List<ChessItem> chessItemBlack = new List<ChessItem>();
-        public List<ChessItem> chessItemRed=new List<ChessItem>();
+        public List<ChessItem> chessItemRed = new List<ChessItem>();
         public static ChessItem[,] GameBoard;
-        public static List<Pointk> KingRed = new List<Pointk>();
-        public static List<Pointk> KingBlack = new List<Pointk>();
-        public static int countRed = 0;
-        public static int countBlack = 0;
-
+        public static ChessItem[,] CircleTable;
         //need these for chess interactions
-        public struct Pointk
-        {
-            public int X { get; set; }
-            public int Y { get; set; }
-            public int Z { get; set; }
 
-            public Pointk(int x, int y,int z)
-            {
-                X = x;
-                Y = y;
-                Z = z;
-            }
-        }
+        public Rectangle chessLocation;
+
+        public readonly Bitmap banCo = new Bitmap(Xiangqi.Properties.Resources.JanggiBrown);
+
+
         public GameManager(MatchGame matchGame)
         {
             this.matchGame = matchGame;
             GameBoard = new ChessItem[10, 9];
+            CircleTable = new ChessItem[10, 9];
 
-            // ORDER: img_locX,img_locY, int type, int side
+            //SIDES:
+            //RED: 1
+            //BLACK: 0
+
+            //TYPES:
+            //Advisor: 1
+            //Cannon : 2
+            //Elephant: 3
+            //General: 4
+            //Horse: 5
+            //Rook: 6
+            //Soldier: 7
+
+
             // Red pieces
             GameBoard[9, 3] = new Advisor(3, 9, 1, 1);
             chessItemRed.Add(GameBoard[9, 3]);
@@ -50,17 +53,17 @@ namespace Xiangqi
             GameBoard[9, 5] = new Advisor(5, 9, 1, 1);
             chessItemRed.Add(GameBoard[9, 5]);
 
-            GameBoard[9, 2] = new Elephant(2, 9, 2, 1);
-            chessItemRed.Add(GameBoard[9, 2]);
-
-            GameBoard[9, 6] = new Elephant(6, 9, 2, 1);
-            chessItemRed.Add(GameBoard[9, 6]);
-
-            GameBoard[7, 1] = new Cannon(1, 7, 3, 1);
+            GameBoard[7, 1] = new Cannon(1, 7, 2, 1);
             chessItemRed.Add(GameBoard[7, 1]);
 
-            GameBoard[7, 7] = new Cannon(7, 7, 3, 1);
+            GameBoard[7, 7] = new Cannon(7, 7, 2, 1);
             chessItemRed.Add(GameBoard[7, 7]);
+
+            GameBoard[9, 2] = new Elephant(2, 9, 3, 1);
+            chessItemRed.Add(GameBoard[9, 2]);
+
+            GameBoard[9, 6] = new Elephant(6, 9, 3, 1);
+            chessItemRed.Add(GameBoard[9, 6]);
 
             GameBoard[9, 4] = new General(4, 9, 4, 1);
             chessItemRed.Add(GameBoard[9, 4]);
@@ -92,6 +95,9 @@ namespace Xiangqi
             GameBoard[6, 8] = new Soldier(8, 6, 7, 1);
             chessItemRed.Add(GameBoard[6, 8]);
 
+
+
+
             // Black pieces 
             GameBoard[0, 3] = new Advisor(3, 0, 1, 0);
             chessItemBlack.Add(GameBoard[0, 3]);
@@ -99,17 +105,17 @@ namespace Xiangqi
             GameBoard[0, 5] = new Advisor(5, 0, 1, 0);
             chessItemBlack.Add(GameBoard[0, 5]);
 
-            GameBoard[0, 2] = new Elephant(2, 0, 2, 0);
-            chessItemBlack.Add(GameBoard[0, 2]);
-
-            GameBoard[0, 6] = new Elephant(6, 0, 2, 0);
-            chessItemBlack.Add(GameBoard[0, 6]);
-
-            GameBoard[2, 1] = new Cannon(1, 2, 3, 0);
+            GameBoard[2, 1] = new Cannon(1, 2, 2, 0);
             chessItemBlack.Add(GameBoard[2, 1]);
 
-            GameBoard[2, 7] = new Cannon(7, 2, 3, 0);
+            GameBoard[2, 7] = new Cannon(7, 2, 2, 0);
             chessItemBlack.Add(GameBoard[2, 7]);
+
+            GameBoard[0, 2] = new Elephant(2, 0, 3, 0);
+            chessItemBlack.Add(GameBoard[0, 2]);
+
+            GameBoard[0, 6] = new Elephant(6, 0, 3, 0);
+            chessItemBlack.Add(GameBoard[0, 6]);
 
             GameBoard[0, 4] = new General(4, 0, 4, 0);
             chessItemBlack.Add(GameBoard[0, 4]);
@@ -140,19 +146,16 @@ namespace Xiangqi
 
             GameBoard[3, 8] = new Soldier(8, 3, 7, 0);
             chessItemBlack.Add(GameBoard[3, 8]);
-
-
         }
-
-
 
         public void PlaceDefaultChessItems(PaintEventArgs e)
         {
-            for (int i = 0; i<10; i++)
+            for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j<9; j++)
+                for (int j = 0; j < 9; j++)
                 {
-                    if (GameBoard[i,j]==null)  GameBoard[i,j]=new EmptyLocation(i,j,0,-1);
+                    if (GameBoard[i, j] == null) GameBoard[i, j] = new EmptyLocation(j, i, 0, -1);
+                    CircleTable[i, j] = new EmptyLocation(j, i, 0, -1);
                 }
             }
 
@@ -160,31 +163,53 @@ namespace Xiangqi
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    GameBoard[i, j].Paint(GameBoard[i, j].type, GameBoard[i,j].side,e);
+                    GameBoard[i, j].Paint(e);
+                    CircleTable[i, j].Paint(e);
                 }
             }
         }
 
         public bool CheckAvailable(int x, int y)
         {
-            int result;
-            for (int i = 0; i<chessItemBlack.Count; i++)
+            bool result;
+            for (int i = 0; i < chessItemBlack.Count; i++)
             {
                 result = chessItemBlack[i].CheckAvailable(x, y);
-                if (result == 1) return true;
+                if (result == true) return true;
             }
             for (int i = 0; i < chessItemRed.Count; i++)
             {
                 result = chessItemRed[i].CheckAvailable(x, y);
-                if (result == 1) return true;
+                if (result == true) return true;
             }
             return false;
         }
 
-        //trao đổi tọa độ giữa hai quân
-        public void Exchange()
-        {
 
-        }
+        ////Paint toàn bộ con cờ của GameBoard tại 1 thời điểm
+        //public void PaintPawn(PaintEventArgs e)
+        //{
+        //    Graphics g = e.Graphics;
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        for (int j = 0; j < 9; j++)
+        //        {
+        //            GameBoard[i, j].PaintG(g);
+        //            CircleTable[i,j].PaintG(g);
+        //        }
+        //    }
+        //}
+
+        ////Paint lại bàn cờ 
+        //public void PaintBoard(PaintEventArgs e)
+        //{
+        //    Graphics g = e.Graphics;
+        //    chessLocation.Width = 451;
+        //    chessLocation.Height = 501;
+        //    chessLocation.Location = new Point(225, 50);
+        //    g.DrawImage(banCo, new Rectangle(225, 50, 451, 501));
+        //}
+
+
     }
 }
